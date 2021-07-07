@@ -3,12 +3,74 @@
 <html>
     <head>
         <title>Ice Breaker</title>
-        <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static '/css/home_style.css' %}">
     </head>
     <body>
+        <section>
+            <img src="{% static 'images/bg_icy.jpg' %}" id="bg">
+            <h2 id="text">Ice Breaker</h2>
+            <img src="{% static 'images/man.png' %}" id="man">
+            <img src="{% static 'images/clouds_1.png' %}" id="cloud_1">
+            <img src="{% static 'images/clouds_2.png' %}" id="cloud_2">
+            <img src="{% static 'images/mountain_left.png' %}" id="mountain_left">
+            <img src="{% static 'images/mountain_right.png' %}" id="mountain_right">
+        </section>
+        <div class="sec">
+            <h2>Bienvenido</h2>
+            <p>Icebreaker es un juego divertido de 5 rondas. Al hacer click en el botón se generará una frase (pickup line) al azar, tendrá la opción de enviarlo o no a una persona del genero o generos al que se siente atraido. Inmediatamente después de eso le preguntará las condiciones que se dieron y si obtuvo respuesta o no. Dependiendo de la anterior respuesta ganará puntos. La persona con más puntos gana el juego. </p>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+        <script>
+            gsap.to('#bg', {
+                scrollTrigger: {
+                    scrub: 1
+                },
+                scale: 1.5
+            });
 
-        <h1>Hola Mundo</h1>
-        <img src="{% static 'images/bg_icy.jpg' %}">
-        
+            gsap.to('#man', {
+                scrollTrigger: {
+                    scrub: 1
+                },
+                scale: 0.5
+            });
+
+            gsap.to('#mountain_left', {
+                scrollTrigger: {
+                    scrub: 1
+                },
+                x: -500,
+            });
+
+            gsap.to('#mountain_right', {
+                scrollTrigger: {
+                    scrub: 1
+                },
+                x: 500,
+            });
+
+            gsap.to('#cloud_1', {
+                scrollTrigger: {
+                    scrub: 1
+                },
+                x: 200,
+            });
+
+            gsap.to('#cloud_2', {
+                scrollTrigger: {
+                    scrub: 1
+                },
+                x: -200,
+            });
+
+            gsap.to('#text', {
+                scrollTrigger: {
+                    scrub: 1
+                },
+                y: 50,
+            });
+        </script>
+
     </body>
 </html>
