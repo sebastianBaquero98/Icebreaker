@@ -7,7 +7,7 @@ Icebreaker es una aplicación web desarrolado sobre python usando django.
 Use [pip](https://pip.pypa.io/en/stable/) para instalar
 
 ```bash
-pip install django
+pip install -r requirements.txt
 ```
 
 ## Autor
