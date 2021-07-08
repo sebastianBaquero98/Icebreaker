@@ -3,11 +3,17 @@ from .models import Frase
 import random
 # Create your views here.
 def frase_view(request):
-    randNum = random.randrange(1,9)
-    obj = Frase.objects.get(id=randNum)
+    #randNum = random.randrange(1,9)
+    rands = random.sample(range(1,9), 3)
+    obj1 = Frase.objects.get(id=rands[0])
+    obj2 = Frase.objects.get(id=rands[1])
+    obj3 = Frase.objects.get(id=rands[2])
 
     context = {
-        'object': obj
+        'object1': obj1,
+        'object2': obj2,
+        'object3': obj3,
+        
     }
     
     return render(request, "frase.html", context)
