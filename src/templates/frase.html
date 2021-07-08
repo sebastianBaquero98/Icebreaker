@@ -33,8 +33,17 @@
                 </div>
                 <div class="frase">
                     <p>{{ object3.contenido}}</p>
-                    <a id="YES" href="#">Enviado</a><span><a id="NO" href="#">No Enviado</a></span>
+                    <a id="YES" class="btn" href="#">Enviado</a><span><a class="btn" id="NO" href="#">No Enviado</a></span>
                 </div>
+            </div>
+        </div>
+        <div class="formulario">
+            <div class="popup-content">
+                <h2>Resultado</h2>
+                <form method="POST"> {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type='submit' value="Save">
+                </form>
             </div>
         </div>    
     </div>
