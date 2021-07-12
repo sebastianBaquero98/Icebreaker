@@ -1,4 +1,7 @@
 from django.db import models
+from performance.models import Performance
+from context.models import Context
+
 
 # Create your models here.
 class Frase(models.Model):
@@ -8,5 +11,16 @@ class Frase(models.Model):
     # Es el contenido de la frase
     contenido = models.TextField(blank=False, null=False)
 
-    # Identificador único de la frase
-    id = models.AutoField(primary_key=True)
+    # Rendimiento de la frase
+    rendimiento = models.OneToOneField(
+        Performance, 
+        on_delete=models.CASCADE,
+        default=None,
+    )
+
+    # Contexto en la que la frase se uso
+    contextF = models.OneToOneField(
+        Context, 
+        on_delete=models.CASCADE, 
+        default=None,
+    )

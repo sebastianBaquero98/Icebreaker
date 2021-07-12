@@ -13,8 +13,4 @@ class Performance(models.Model):
     # Representa numero de veces que se uso con éxito
     numVecesExitoso = models.IntegerField
 
-    # Guarda el contexto en el que fue usado la frase [Abrir conversacion o Durante la conversación]
-    contextoUsado = models.CharField(max_length=120)
-
-    # Guarda en que aplicación se uso Ejemplos: [Instagram, Facebook, Tinder, Bumble, Twitter]
-    aplicacionUsada = models.CharField(max_length=120) 
+    
