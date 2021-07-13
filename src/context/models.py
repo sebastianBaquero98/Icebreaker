@@ -1,4 +1,6 @@
 from django.db import models
+from user.models import User
+from frase.models import Frase
 
 # Create your models here.
 class Context(models.Model):
@@ -13,7 +15,21 @@ class Context(models.Model):
     situaciones = [('A', 'Abrir Conversación'), ('S', 'Seguir Conversación')]
 
     # En que aplicación se envio
-    aplicacionUsada = models.CharField(choices=arrAplicaciones, max_length=120)
+    aplicacionUsada = models.CharField(choices=arrAplicaciones, max_length=120, null=True)
 
     # Situación en la que se uso la frase (Para abrir o seguir una conversación)
-    situacionUsada = models.CharField(choices=situaciones, max_length=120)
+    situacionUsada = models.CharField(choices=situaciones, max_length=120, null=True)
+
+    # Usuario del contexto
+    usuario = models.OneToOneField(
+        User, 
+        on_delete=models.CASCADE,
+        default=None,
+    )
+    
+    # Frase del contexto
+    frase = models.OneToOneField(
+        Frase, 
+        on_delete=models.CASCADE, 
+        default=None,
+    )

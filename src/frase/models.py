@@ -1,6 +1,5 @@
 from django.db import models
 from performance.models import Performance
-from context.models import Context
 
 
 # Create your models here.
@@ -15,12 +14,5 @@ class Frase(models.Model):
     rendimiento = models.OneToOneField(
         Performance, 
         on_delete=models.CASCADE,
-        default=None,
-    )
-
-    # Contexto en la que la frase se uso
-    contextF = models.OneToOneField(
-        Context, 
-        on_delete=models.CASCADE, 
         default=None,
     )

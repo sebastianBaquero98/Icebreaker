@@ -1,5 +1,4 @@
 from django.db import models
-from context.models import Context
 
 # Create your models here.
 class User(models.Model):
@@ -14,9 +13,4 @@ class User(models.Model):
     # Puntaje del usuario
     score = models.IntegerField(default=0)
 
-    # Contexto en el que el usuario uso la frase
-    contextF = models.OneToOneField(
-        Context, 
-        on_delete=models.CASCADE,
-        default=None,
-    )
+    
