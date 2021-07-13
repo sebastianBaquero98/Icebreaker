@@ -15,4 +15,6 @@ class Frase(models.Model):
         Performance, 
         on_delete=models.CASCADE,
         default=None,
+        null=True,
+        blank=True,
     )

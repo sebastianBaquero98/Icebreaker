@@ -15,16 +15,18 @@ class Context(models.Model):
     situaciones = [('A', 'Abrir Conversación'), ('S', 'Seguir Conversación')]
 
     # En que aplicación se envio
-    aplicacionUsada = models.CharField(choices=arrAplicaciones, max_length=120, null=True)
+    aplicacionUsada = models.CharField(choices=arrAplicaciones, max_length=120, null=True, blank=True)
 
     # Situación en la que se uso la frase (Para abrir o seguir una conversación)
-    situacionUsada = models.CharField(choices=situaciones, max_length=120, null=True)
+    situacionUsada = models.CharField(choices=situaciones, max_length=120, null=True, blank=True)
 
     # Usuario del contexto
     usuario = models.OneToOneField(
         User, 
         on_delete=models.CASCADE,
         default=None,
+        null=True,
+        blank=True,
     )
     
     # Frase del contexto
@@ -32,4 +34,6 @@ class Context(models.Model):
         Frase, 
         on_delete=models.CASCADE, 
         default=None,
+        null=True,
+        blank=True,
     )
