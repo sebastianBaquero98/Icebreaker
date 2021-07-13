@@ -13,7 +13,7 @@ class Context(models.Model):
     situaciones = [('A', 'Abrir Conversación'), ('S', 'Seguir Conversación')]
 
     # En que aplicación se envio
-    aplicacionUsada = models.CharField(null=False, choices=arrAplicaciones, max_length=120)
+    aplicacionUsada = models.CharField(choices=arrAplicaciones, max_length=120)
 
     # Situación en la que se uso la frase (Para abrir o seguir una conversación)
-    situacionUsada = models.CharField(null=False, choices=situaciones, max_length=120)
+    situacionUsada = models.CharField(choices=situaciones, max_length=120)
