@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from frase.views import frase_view
+from user.views import acceso_view
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', frase_view),
+    path('home/', acceso_view),
     #path('', home_view)
 ]

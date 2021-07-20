@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static '/css/acceso_style.css' %}">
+    </head> 
+    <div class="all">
+        <div class="wrapper">
+            <!-- <form method="POST"> {% csrf_token %}
+                {{ form.as_p }}
+                <input type='submit' value="Save">
+            </form> -->
+            <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>Nombre</label>
+             </div>
+             <div class="input-data">
+                 <input type="text" required>
+                 <div class="underline"></div>
+                 <label>Usuario</label>
+              </div>
+        </div>
+    </div>
+</html>
+{% endblock %}
