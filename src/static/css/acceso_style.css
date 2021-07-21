@@ -68,3 +68,17 @@
   .input-data input:valid ~ .underline:before{
     transform: scaleX(1);
   }
+  .all .wrapper a
+  {
+    color: #fff;
+    background: red;
+    text-decoration: none;
+    position: absolute;
+    margin-top: 47px;
+    padding: 10px 232px;
+    margin-left: -30px;
+    box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    
+    
+  }
