@@ -1,5 +1,5 @@
 from django.db import models
-from user.models import User
+from user.models import MyUser
 from frase.models import Frase
 
 # Create your models here.
@@ -22,7 +22,7 @@ class Context(models.Model):
 
     # Usuario del contexto
     usuario = models.OneToOneField(
-        User, 
+        MyUser, 
         on_delete=models.CASCADE,
         default=None,
         null=True,
